@@ -1,1 +1,223 @@
 /*  your css code here. If applicable */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #dce5dc;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    padding: 8px 20px 25px;
+}
+
+/* Top architectural image */
+.hero {
+    width: 58%;
+    max-width: 770px;
+    margin-bottom: 28px;
+}
+
+.hero img {
+    width: 100%;
+    height: 402px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Main three-column section */
+.page {
+    width: 100%;
+    max-width: 1305px;
+    margin: 0 auto;
+    border: 1px solid #777;
+    display: grid;
+    grid-template-columns: 270px 1fr 270px;
+    background: #dce5dc;
+}
+
+/* Side panels */
+.side-panel {
+    min-width: 0;
+}
+
+.left-panel {
+    border-right: 1px solid #777;
+}
+
+.right-panel {
+    border-left: 1px solid #777;
+}
+
+.side-image,
+.spiral-image {
+    padding: 14px;
+    border-bottom: 1px solid #777;
+}
+
+.side-image img,
+.spiral-image img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+}
+
+.spiral-image img {
+    height: 180px;
+}
+
+/* Center */
+.content {
+    min-width: 0;
+}
+
+.unit-title {
+    min-height: 195px;
+    border-bottom: 1px solid #777;
+    padding: 28px 25px 20px;
+    text-align: center;
+}
+
+.unit-title h1 {
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.unit-title ol {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto 2px;
+    padding-left: 0;
+    list-style-position: inside;
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+.unit-title h2 {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.objective {
+    padding: 42px 22px 25px;
+    text-align: center;
+}
+
+.objective h2 {
+    font-size: 23px;
+    margin-bottom: 22px;
+}
+
+.objective p {
+    font-size: 19px;
+    line-height: 1.34;
+}
+
+/* Advertisement cards */
+.ad-card,
+.green-floor {
+    padding: 0 14px 12px;
+}
+
+.ad-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.ad-card h3,
+.green-floor h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.ad-card p,
+.green-floor p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 4px;
+    color: #2b008d;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.second {
+    border-bottom: 1px solid #777;
+}
+
+.green-floor {
+    padding-top: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    body {
+        padding: 10px;
+    }
+
+    .hero {
+        width: 100%;
+        max-width: none;
+    }
+
+    .hero img {
+        height: 300px;
+    }
+
+    .page {
+        grid-template-columns: 1fr;
+    }
+
+    .left-panel,
+    .right-panel {
+        border: none;
+    }
+
+    .left-panel {
+        border-bottom: 1px solid #777;
+    }
+
+    .right-panel {
+        border-top: 1px solid #777;
+    }
+
+    .side-image img,
+    .spiral-image img,
+    .ad-card img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero img {
+        height: 220px;
+    }
+
+    .unit-title {
+        padding: 22px 12px;
+    }
+
+    .unit-title h1 {
+        font-size: 20px;
+    }
+
+    .unit-title ol,
+    .objective p {
+        font-size: 16px;
+    }
+
+    .objective {
+        padding: 30px 15px 20px;
+    }
+}
